@@ -28,7 +28,7 @@ function Overview() {
           />
         </button>
       </div>
-      <div className="w-full overflow-hidden" style={{ height: isAddTxnVisible ? "250px" : "0", transition: "all 0.3s" }}>
+      <div className="w-full overflow-hidden" style={{ height: isAddTxnVisible ? "17rem" : "0", transition: "all 0.3s" }}>
         <AddForm />
       </div>
     </div>
