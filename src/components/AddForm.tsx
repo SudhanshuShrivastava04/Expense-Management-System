@@ -9,7 +9,7 @@ const TransactionSchema = Yup.object().shape({
   description: Yup.string().required("Description is required"),
   type: Yup.string().required("Select either Expense or Income"),
 });
-function AddForm() {
+function AddForm({ currentBalance, setCurrentBalance }) {
   const initialValues = {
     amount: "",
     description: "",
@@ -17,13 +17,13 @@ function AddForm() {
   };
   const handleSubmit = (values, { resetForm }) => {
     const initialBalance = 0;
-    const [currentBalance, setCurrentBalance] = useState(initialBalance);
     const amount = parseFloat(values.amount);
     const isExpense = values.type === "expense";
 
     const balance = isExpense
       ? currentBalance - amount
       : currentBalance + amount;
+    setCurrentBalance(balance);
     console.log("New Balance:", balance);
 
     resetForm();
@@ -75,7 +75,9 @@ function AddForm() {
             </label>
             <ErrorMessage name="type">
               {(msg) => (
-                <div className="text-red-500 text-left text-sm self-end">{msg}</div>
+                <div className="text-red-500 text-left text-sm self-end">
+                  {msg}
+                </div>
               )}
             </ErrorMessage>
           </div>

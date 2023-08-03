@@ -3,6 +3,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 import AddForm from "./AddForm";
 function Overview() {
   const [isAddTxnVisible, toggleAddTxn] = useState(false);
+  const [currentBalance, setCurrentBalance] = useState(0);
   const handleAddTxn = () => {
     toggleAddTxn(!isAddTxnVisible);
   };
@@ -14,7 +15,7 @@ function Overview() {
             Balance :{" "}
           </h1>
           <p className="md:text-2xl text-primaryHeading font-semibold">
-            $0
+            ${currentBalance}
           </p>
         </div>
         <button
@@ -37,7 +38,7 @@ function Overview() {
           transition: "all 0.3s",
         }}
       >
-        <AddForm />
+        <AddForm currentBalance={currentBalance} setCurrentBalance={setCurrentBalance} />
       </div>
     </div>
   );
