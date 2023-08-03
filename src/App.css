@@ -1,0 +1,25 @@
+/* Define the gradient background animation */
+@keyframes gradientChange {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Apply the gradient animation to the .gradient-bg class */
+.gradient-bg {
+  animation: gradientChange 8s linear infinite;
+  background-image: linear-gradient(
+    to right,
+    #24c6dc,
+    #514a9d,
+    #e099f9,
+    #24c6dc
+  );
+  background-size: 400% 400%; /* Increase the size for smoother animation */
+}
