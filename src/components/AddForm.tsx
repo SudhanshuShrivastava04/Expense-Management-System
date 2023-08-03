@@ -9,12 +9,13 @@ const TransactionSchema = Yup.object().shape({
   description: Yup.string().required("Description is required"),
   type: Yup.string().required("Select either Expense or Income"),
 });
-function AddForm({ currentBalance, setCurrentBalance }) {
+function AddForm({ currentBalance, setCurrentBalance, onAddTransaction }) {
   const initialValues = {
     amount: "",
     description: "",
     type: "",
   };
+
   const handleSubmit = (values, { resetForm }) => {
     const initialBalance = 0;
     const amount = parseFloat(values.amount);
@@ -25,7 +26,12 @@ function AddForm({ currentBalance, setCurrentBalance }) {
       : currentBalance + amount;
     setCurrentBalance(balance);
     console.log("New Balance:", balance);
-
+    const transaction = {
+      amount: parseFloat(values.amount),
+      description: values.description,
+      type: values.type,
+    };
+    onAddTransaction(transaction);
     resetForm();
   };
   return (

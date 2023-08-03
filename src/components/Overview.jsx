@@ -1,9 +1,16 @@
 import { useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import AddForm from "./AddForm";
+import Transaction from "./Transaction";
+
 function Overview() {
   const [isAddTxnVisible, toggleAddTxn] = useState(false);
   const [currentBalance, setCurrentBalance] = useState(0);
+  const [transactions, setTransactions] = useState([]);
+
+  const handleAddTransaction = (transaction) => {
+    setTransactions([...transactions, transaction]);
+  };
   const handleAddTxn = () => {
     toggleAddTxn(!isAddTxnVisible);
   };
@@ -34,12 +41,17 @@ function Overview() {
       <div
         className="w-full overflow-hidden"
         style={{
-          height: isAddTxnVisible ? "20rem" : "0",
+          height: isAddTxnVisible ? "16rem" : "0",
           transition: "all 0.3s",
         }}
       >
-        <AddForm currentBalance={currentBalance} setCurrentBalance={setCurrentBalance} />
+        <AddForm
+          currentBalance={currentBalance}
+          setCurrentBalance={setCurrentBalance}
+          onAddTransaction={handleAddTransaction}
+        />
       </div>
+      <Transaction transactions={transactions} />
     </div>
   );
 }
