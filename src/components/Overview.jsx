@@ -14,7 +14,7 @@ function Overview() {
             Balance :{" "}
           </h1>
           <p className="md:text-2xl text-primaryHeading font-semibold">
-            $1000
+            $0
           </p>
         </div>
         <button
