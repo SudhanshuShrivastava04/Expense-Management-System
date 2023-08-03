@@ -14,7 +14,7 @@ function Transaction({ transactions }) {
           {transactions.map((transaction, index) => (
             <li
               key={index}
-              className="w-full bg-gray-200 p-2 rounded-md flex flex-row justify-between items-center"
+              className="w-[99%] bg-gray-200 p-2 rounded-md flex flex-row justify-between items-center"
               style={{
                 borderRight:
                   transaction.type === "expense"
