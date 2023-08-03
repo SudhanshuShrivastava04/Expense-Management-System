@@ -25,8 +25,8 @@ function Overview() {
           {isAddTxnVisible ? "Close" : "Add"}
           <AiOutlinePlus
             style={{
-              transform: isAddTxnVisible ? "rotate(225deg)" : "",
-              transition: "all 0.3s",
+              transform: isAddTxnVisible ? "rotate(405deg)" : "",
+              transition: "all 0.7s",
             }}
           />
         </button>
