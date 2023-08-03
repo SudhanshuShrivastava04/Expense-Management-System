@@ -8,15 +8,15 @@ function Overview() {
   };
   return (
     <div className="w-full flex flex-col items-center font-montserrat my-10">
-      <div className="flex flex-row w-full items-stretch justify-between">
-        <div className="w-1/2 flex flex-row gap-2">
-          <h1 className="text-2xl text-primaryHeading font-semibold">
+      <div className="flex flex-row w-full md:items-stretch items-center justify-between">
+        <div className="md:w-1/2 w-full flex flex-row gap-2">
+          <h1 className="md:text-2xl text-primaryHeading font-semibold">
             Balance :{" "}
           </h1>
-          <p className="text-2xl text-primaryHeading font-semibold">$100</p>
+          <p className="md:text-2xl text-primaryHeading font-semibold">$100</p>
         </div>
         <button
-          className="text-white bg-primaryHeading px-5 rounded-md text-xl hover:bg-gray-700 inline-flex items-center gap-2 duration-300"
+          className="text-white bg-primaryHeading md:px-3 px-2 rounded-md md:text-xl hover:bg-gray-700 inline-flex items-center gap-2 duration-300"
           onClick={handleAddTxn}
         >
           {isAddTxnVisible ? "Close" : "Add"}

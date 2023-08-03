@@ -33,7 +33,7 @@ function AddModal() {
               Expense
             </label>
           </div>
-          <button className="bg-primaryHeading p-2 rounded-md text-xl hover:bg-gray-700 text-white self-center">Add Transaction</button>
+          <button className="bg-primaryHeading p-2 rounded-md md:text-xl text-md hover:bg-gray-700 text-white self-center">Add Transaction</button>
         </Form>
       </Formik>
     </div>
