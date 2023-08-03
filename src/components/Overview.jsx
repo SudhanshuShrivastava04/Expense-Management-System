@@ -13,7 +13,9 @@ function Overview() {
           <h1 className="md:text-2xl text-primaryHeading font-semibold">
             Balance :{" "}
           </h1>
-          <p className="md:text-2xl text-primaryHeading font-semibold">$100</p>
+          <p className="md:text-2xl text-primaryHeading font-semibold">
+            $1000
+          </p>
         </div>
         <button
           className="text-white bg-primaryHeading md:px-3 px-2 rounded-md md:text-xl hover:bg-gray-700 inline-flex items-center gap-2 duration-300"
@@ -28,7 +30,13 @@ function Overview() {
           />
         </button>
       </div>
-      <div className="w-full overflow-hidden" style={{ height: isAddTxnVisible ? "17rem" : "0", transition: "all 0.3s" }}>
+      <div
+        className="w-full overflow-hidden"
+        style={{
+          height: isAddTxnVisible ? "20rem" : "0",
+          transition: "all 0.3s",
+        }}
+      >
         <AddForm />
       </div>
     </div>
