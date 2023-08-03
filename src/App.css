@@ -13,7 +13,7 @@
 
 /* Apply the gradient animation to the .gradient-bg class */
 .gradient-bg {
-  animation: gradientChange 8s linear infinite;
+  animation: gradientChange 10s linear infinite;
   background-image: linear-gradient(
     to right,
     #24c6dc,
@@ -21,5 +21,5 @@
     #e099f9,
     #24c6dc
   );
-  background-size: 400% 400%; /* Increase the size for smoother animation */
+  background-size: 10000% 10000%; /* Increase the size for smoother animation */
 }
