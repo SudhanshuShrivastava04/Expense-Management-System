@@ -2,14 +2,14 @@
 // eslint-disable-next-line react/prop-types
 function Transaction({ transactions }) {
   return (
-    <div className="w-full flex flex-col items-center  font-montserrat my-10">
+    <div className="w-full flex flex-col items-center  font-montserrat my-5">
       <h1 className="md:text-2xl text-primaryHeading font-semibold text-left w-full">
         Transactions List
       </h1>
       {transactions.length === 0 && (
         <div className="text-lg bg-gray-200 px-5 py-2 rounded-md mt-10">No transactions found</div>
       )}
-      <div className="w-full overflow-y-auto max-h-[8rem]">
+      <div className="w-full overflow-y-auto max-h-[6rem]">
         <ul className="w-full flex flex-col gap-4">
           {transactions.map((transaction, index) => (
             <li
